@@ -1,4 +1,4 @@
-// javascript/main.js
+// main.js
 const API_KEY = config.WEATHER_API_KEY; // Access the API key from config.js
 
 // Function to fetch weather data
@@ -35,7 +35,7 @@ function displayWeatherData(data) {
 
 // Add event listener to the search button
 document.querySelector('.search-button').addEventListener('click', () => {
-  const zipcode = document.querySelector('.zipcode').value.trim();
+  const zipcode = document.querySelector('.zipcode').value;
   if (zipcode) {
     getWeatherData(zipcode);
   } else {
