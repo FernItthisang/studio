@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cityName.textContent = data.name;
       temperature.textContent = `${(data.main.temp - 273.15).toFixed(2)}°C`; // Convert from Kelvin to Celsius
       const iconCode = data.weather[0].icon;
-      weatherIcon.src = `http://openweathermap.org/img/wn/${iconCode}.png`;
+      weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}.png`; // Use HTTPS
       weatherIcon.alt = data.weather[0].description;
     } else {
       cityName.textContent = 'Error';
